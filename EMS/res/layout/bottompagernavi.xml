@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomnavi"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_bar"
+    android:gravity="right"
+    android:paddingRight="5dp" >
+
+    <ImageView
+        android:id="@+id/gofirst"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:src="@drawable/pageleft2" />
+
+    <ImageView
+        android:id="@+id/goprevious"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:src="@drawable/pageleft" />
+
+    <TextView
+        android:id="@+id/showpager"
+        style="@style/styleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|fill_horizontal"
+        android:layout_weight="1"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:text="1/1"
+        android:textColor="@color/white"
+        android:textSize="24dp" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/gonext"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:src="@drawable/pageright" />
+
+    <ImageView
+        android:id="@+id/golast"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/pageright2" />
+
+</LinearLayout>

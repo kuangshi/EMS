@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="listDivider">#111672</color>
+    <color name="character">#f37301</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="notepad_paper">#AAFFFF99</color>
+    <color name="notepad_lines">#FF0000FF</color>
+    <color name="notepad_margin">#90FF0000</color>
+    <color name="notepad_text">#AA0000FF</color>
+    <color name="labelColor">#333333</color>
+    <color name="contentColor">#333333</color>
+    <color name="green">#00cc00</color>
+    <color name="gray">#dedede</color>
+    <color name="home_item">#ffd90000</color>
+    <color name="red">#FF0000</color>
+    <color name="grey">#c0c0c0</color>
+    
+
+</resources>

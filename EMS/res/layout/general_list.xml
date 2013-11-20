@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_topmen"
+        android:layout_width="wrap_content"
+        android:layout_height="45dip"
+        android:layout_centerHorizontal="true"
+        android:padding="0dip" >
+
+        <include layout="@layout/topmenu" >
+        </include>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/news_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_topmen"
+        android:layout_above="@+id/layout_bottomnavi"
+        android:layout_centerHorizontal="true"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/listDivider"
+        android:dividerHeight="1px"
+        android:fastScrollEnabled="true"
+        android:focusable="true" android:background="@drawable/bg_shadow_shape">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottomnavi"
+        android:layout_width="wrap_content"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="0dip" >
+
+        <include layout="@layout/bottompagernavi" >
+        </include>
+    </RelativeLayout>
+
+</RelativeLayout>

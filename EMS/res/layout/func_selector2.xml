@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_cart_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffefebe7" >
+
+
+   
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="60.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/ggtz"
+                    android:layout_width="140sp"
+                    android:layout_height="120sp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10sp"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center"
+                    android:onClick="click"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/ggtz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_ggtz" />
+"
+
+                    <TextView
+                        android:id="@+id/jclh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10.0dip"
+                        android:includeFontPadding="false"
+                        android:text="公告通知"
+                        android:textColor="@color/home_item"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/grxx"
+                    android:layout_width="140sp"
+                    android:layout_height="120sp"
+                    android:layout_marginRight="10sp"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center"
+                    android:onClick="click"
+                    android:orientation="vertical" >
+
+                     <ImageView 
+                        android:id="@+id/ggtz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_grxx"/>
+                    <TextView
+                        android:id="@+id/tcrw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人信息"
+                        android:drawablePadding="10.0dip"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/home_item"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/yhgl"
+                    android:layout_width="140sp"
+                    android:layout_height="120sp"
+                    android:layout_marginLeft="10sp"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center"
+                    android:onClick="click"
+                    android:orientation="vertical" >
+
+ 					<ImageView 
+                        android:id="@+id/ggtz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_yhgl"/>
+                    <TextView
+                        android:id="@+id/yhgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户管理"
+                        android:drawablePadding="10.0dip"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/home_item"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sjpf"
+                    android:layout_width="140sp"
+                    android:layout_height="120sp"
+                    android:layout_marginRight="10sp"
+                    android:background="@drawable/more_item_press"
+                    android:gravity="center"
+                    android:onClick="click"
+                    android:orientation="vertical" >
+
+                     <ImageView 
+                        android:id="@+id/ggtz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_sjpf"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="实践评分"
+                        android:drawablePadding="10.0dip"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/home_item"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

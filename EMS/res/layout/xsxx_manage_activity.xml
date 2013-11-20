@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/reback_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_btn_back"
+            android:onClick="btn_click"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Textviewzdy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="学生信息"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" >
+
+        <EditText
+            android:id="@+id/txtId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/bg_9patcheditbox"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="请输入证件号码"
+            android:text="360424199109041603"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_style_blue"
+            android:onClick="btn_click"
+            android:text="确定"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+         <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layout_topmen"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:background="@color/grey" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+       		android:background="@color/grey" 
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:stretchColumns="4" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:background="@color/red" >
+                <TextView
+                    android:id="@+id/TextView013"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:height="1dip"
+                    android:textColor="#0000ff"
+                    android:textSize="1sp"
+                    android:layout_width="fill_parent"/>
+                <TextView
+                    android:id="@+id/TextView013"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:maxWidth="121dp"
+                    android:textColor="#0000ff"
+                    android:textSize="1sp" />
+                 <TextView
+                    android:id="@+id/TextView013"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="1dip"
+                    android:textColor="#0000ff"
+                    android:textSize="1sp"
+                    android:layout_width="fill_parent"/>
+                <TextView
+                    android:id="@+id/TextView013"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:textColor="#0000ff"
+                    android:textSize="1sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingTop="1dip"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="32sp"
+                    android:text="姓　　名"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/txtxm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dip"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="性　　别"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtxb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="民　　族"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtmz"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dip"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="政治面貌"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtzzmm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="证件号码"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtzjhm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="联系电话"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtlxdh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                
+            </TableRow>
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="联系地址"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtlxdz"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+			 <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="QQ号码"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtqq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+               
+            </TableRow>
+           
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+ <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="家庭电话"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtjtdh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="邮　　编"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtyb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                
+            </TableRow>
+             
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="籍　　贯"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtjg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="报考学校"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtbkxx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="报考专业"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="80dip" />
+
+                <TextView
+                    android:id="@+id/txtbkzy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="学习类型"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtxxlx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dip"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="学习层次"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtxxcc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+
+          
+             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="毕业学校"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtbyxx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="毕业专业"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtbyzy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+
+          
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:paddingBottom="1dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:minHeight="40dip"
+                    android:text="考前学历"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtxl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:maxWidth="121dp"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:height="30dip"
+                    android:minHeight="40dp"
+                    android:text="备注信息"
+                    android:textColor="@color/labelColor"
+                    android:textSize="18sp"
+                    android:width="60dip" />
+
+                <TextView
+                    android:id="@+id/txtbzxx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dip"
+                    android:paddingLeft="3dip"
+                    android:textColor="@color/contentColor"
+                    android:textSize="18sp" />
+            </TableRow>
+            
+            <TableRow android:id="@+id/DynRow" >
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

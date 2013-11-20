@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal">
+    <RelativeLayout
+        android:id="@+id/layout_topmen"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_centerHorizontal="true"
+        android:padding="0dip" >
+
+        <include
+            android:layout_alignParentTop="true"
+            layout="@layout/topmenu" >
+
+        </include>
+    </RelativeLayout>
+
+	<EditText 
+	    android:id="@+id/login_user_edit"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/layout_topmen"
+	    android:textColor="#000"
+	    android:textSize="15sp"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	     android:password="true"
+	    android:singleLine="true"
+	    android:background="@drawable/login_editbox"
+	    android:hint="请输入原密码"/>
+	<EditText 
+	    android:id="@+id/login_passwd_edit"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/login_user_edit"
+	    android:textColor="#000"
+	    android:textSize="15sp"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:background="@drawable/login_editbox"
+	    android:password="true"
+	    android:singleLine="true"
+	    android:hint="请输入新密码"/>
+	<EditText 
+	    android:id="@+id/login_passwd_new"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/login_passwd_edit"
+	    android:textColor="#000"
+	    android:textSize="15sp"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:background="@drawable/login_editbox"
+	    android:password="true"
+	    android:singleLine="true"
+	    android:hint="请再次输入新密码"/>
+		
+	<RelativeLayout 
+	    android:id="@+id/login_middle"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:layout_below="@+id/login_passwd_new"
+	    >
+	   
+	     <Button
+	        android:id="@+id/login_login_btn"
+	        android:layout_width="90dp"
+	        android:layout_height="40dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_alignParentRight="true"
+	        android:text="确认"
+	        android:background="@drawable/btn_style_green"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp"
+	        />
+	</RelativeLayout>
+	
+</RelativeLayout>

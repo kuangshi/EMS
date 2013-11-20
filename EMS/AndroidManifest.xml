@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="trueInfo.ems"
+    android:versionCode="1"
+    android:versionName="1.0.1" >
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="trueInfo.ems.LoadingActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name="trueInfo.ems.LoginActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="trueInfo.ems.MainActivity"
+            android:icon="@drawable/logo"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <activity android:name="trueInfo.appManage.UpdateActivity" >
+        </activity>
+     
+        <activity
+            android:name="trueInfo.ems.Exit"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <activity
+            android:name="trueInfo.ems.DocDealActivity"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <activity
+            android:name="trueInfo.ems.SettingDialog"
+            android:theme="@style/MyDialogStyleTop" >
+        </activity>
+       
+   
+        <activity
+            android:name="trueInfo.ems.Func_Selector"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 测试 -->
+        <activity
+            android:name="trueInfo.ems.Func_Selector2"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="trueInfo.ems.Func_XsglActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="trueInfo.ems.Func_ZhglActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="trueInfo.ems.Func_ZhglActivity2"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="trueInfo.ems.Func_ShezActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name="trueInfo.ems.NoticeInfoActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name="trueInfo.ems.NoticeListActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name="trueInfo.ems.User_ManageActivity"
+            android:theme="@android:style/Theme.NoTitleBar">            
+        </activity>"
+        <activity android:name="trueInfo.ems.AboutActivity" 
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="Person_InfoActivity" 
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="SJPF_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="DocDealLXFSActivity" android:theme="@style/MyDialogStyle"></activity>
+        <activity android:name="XSXX_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="XSCJ_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name="BaoKao_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 拍照权限 -->
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk android:minSdkVersion="8" >
+    </uses-sdk>
+
+</manifest>
