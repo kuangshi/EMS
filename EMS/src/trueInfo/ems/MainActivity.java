@@ -122,7 +122,7 @@ public class MainActivity extends TabActivity implements OnTabChangeListener,OnG
 		TextView localTextView = (TextView) localView.findViewById(R.id.title);
 		localImageView.setImageResource(R.drawable.icon_1_n);
 		localTextView.setText("首页");
-		Intent localIntent = new Intent(this, Func_Selector2.class);
+		Intent localIntent = new Intent(this, Func_Selector.class);
 		localIntent.putExtra("uno", uno);
 		localTabSpec.setIndicator(localView).setContent(localIntent);
 		mth.addTab(localTabSpec);
@@ -151,7 +151,7 @@ public class MainActivity extends TabActivity implements OnTabChangeListener,OnG
 		localImageView.setImageResource(R.drawable.icon_2_n);
 		localTextView.setText("综合管理");
 		TabHost.TabSpec localTabSpec2 = localTabSpec1.setIndicator(localView);
-		Intent localIntent = new Intent(this, Func_ZhglActivity.class);
+		Intent localIntent = new Intent(this, Func_ZhglActivity2.class);
 		localIntent.putExtra("uno", uno);
 		localTabSpec2.setContent(localIntent);
 		mth.addTab(localTabSpec1);

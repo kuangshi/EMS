@@ -2,7 +2,6 @@ package trueInfo.ems;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.ksoap2.SoapEnvelope;
@@ -49,16 +48,12 @@ public class Func_Selector extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-
 		Intent intent = getIntent(); // 获得启动该Activity的Intent
 		uno = SharedPrefsUtil.getValue(this, "CommunityID", "");
 		OPID = SharedPrefsUtil.getValue(this, "OPID", "");
-
 		setContentView(R.layout.func_selector);
-
 		// 初始化功能菜单
 		initFuncGrids();
-
 	}
 
 	Handler myHandler = new Handler() {
@@ -66,15 +61,10 @@ public class Func_Selector extends Activity {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
 			case 0:
-
 				break;
-
 			case 1:
-
 				if (countall > 0) {
-
 					if (badge1 != null && badge1.isShown()) {
-
 						badge1.setText(String.valueOf(countall));
 
 					} else {
@@ -84,39 +74,29 @@ public class Func_Selector extends Activity {
 						ImageView imgView2 = (ImageView) rlayout
 								.findViewById(R.id.ItemImage);
 						badge1 = new BadgeView(getBaseContext(), imgView2);
-
 						badge1.setText(String.valueOf(countall));
 						badge1.setBadgePosition(BadgeView.POSITION_BOTTOM_RIGHT);
 						badge1.show();
 					}
 
 				} else {
-
 					Log.i("moa", "moa-------------很奇怪怎么没变啊");
-
 					if (badge1 != null) {
 						badge1.hide();
 						// badge1.toggle();
 					}
-
 				}
-
 				break;
-
 			case 98:
-
 				// 出现了网络异常
 				// Toast.makeText(getBaseContext(), "没有数据！", Toast.LENGTH_SHORT)
 				// .show();
 				break;
-
 			case 99:
-
 				// 出现了未捕获的异常
 				// Toast.makeText(getBaseContext(), "出现了异常,请稍候再试或联系管理员！",
 				// Toast.LENGTH_SHORT).show();
 				break;
-
 			}
 			super.handleMessage(msg);
 		}
@@ -132,20 +112,20 @@ public class Func_Selector extends Activity {
 		map.put("ItemText", "公告通知");
 		lstImageItem.add(map);
 
-		map = new HashMap<String, Object>();
-		map.put("ItemImage", R.drawable.b10);
-		map.put("ItemText", "个人信息");
-		lstImageItem.add(map);
+//		map = new HashMap<String, Object>();
+//		map.put("ItemImage", R.drawable.b10);
+//		map.put("ItemText", "个人信息");
+//		lstImageItem.add(map);
 
 		map = new HashMap<String, Object>();
 		map.put("ItemImage", R.drawable.qings00);
 		map.put("ItemText", "用户管理");
 		lstImageItem.add(map);
-
-		map = new HashMap<String, Object>();
-		map.put("ItemImage", R.drawable.fawen);
-		map.put("ItemText", "实践评分");
-		lstImageItem.add(map);
+//
+//		map = new HashMap<String, Object>();
+//		map.put("ItemImage", R.drawable.fawen);
+//		map.put("ItemText", "实践评分");
+//		lstImageItem.add(map);
 
 //		map = new HashMap<String, Object>();
 //		map.put("ItemImage", R.drawable.b11);
@@ -160,7 +140,6 @@ public class Func_Selector extends Activity {
 				new String[] { "ItemImage", "ItemText" },
 				// ImageItem的XML文件里面的一个ImageView,两个TextView ID
 				new int[] { R.id.ItemImage, R.id.ItemText });
-		// null);
 		// 添加并且显示
 		funcSeleView.setAdapter(saImageItems);
 		// saImageItems.notifyDataSetChanged();
@@ -189,32 +168,36 @@ public class Func_Selector extends Activity {
 			switch (arg2) {
 			case 0:
 				i = new Intent();
-				i.setClass(Func_Selector.this, NoticeListActivity.class);
+				i.setClass(Func_Selector.this, TodoList_ManageActivity.class);
 			//	i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "01");
 				startActivity(i);
 				break;
 
 			case 1:
 				i = new Intent();
-				i.setClass(Func_Selector.this, Person_InfoActivity.class);
+				i.setClass(Func_Selector.this, TodoList_ManageActivity.class);
 				i.putExtra("uno", uno);
+				i.putExtra("dbfl", "02");
+				//i.putExtra("TableName", "ZHBG_SBZL_JBXX");
 				startActivity(i);
 				break;
-			case 2:
-				i = new Intent();
-
-				i.setClass(Func_Selector.this, User_ManageActivity.class);
-				i.putExtra("uno", uno); // 设置Intent的Extra字段
-				startActivity(i);
-				break;
-			case 3:
-				i = new Intent();
-
-				i.setClass(Func_Selector.this,SJPF_ManageActivity.class);
-				i.putExtra("uno", uno); // 设置Intent的Extra字段
-				startActivity(i);
-				break;
-			
+//			case 2:
+//				i = new Intent();
+//				i.setClass(Func_Selector.this, TodoList_ManageActivity.class);
+//				i.putExtra("uno", uno); // 设置Intent的Extra字段
+//				i.putExtra("dbfl", "02");
+//				i.putExtra("TableName", "ZHBG_SBZL_JBXX");
+//				startActivity(i);
+//				break;
+//			case 3:
+//				i = new Intent();
+//				i.setClass(Func_Selector.this,TodoList_ManageActivity.class);
+//				i.putExtra("uno", uno); // 设置Intent的Extra字段
+//				i.putExtra("dbfl", "02");
+//				i.putExtra("TableName", "ZHBG_SBZL_JBXX");
+//				startActivity(i);
+//				break;
 			default:
 				break;
 			}

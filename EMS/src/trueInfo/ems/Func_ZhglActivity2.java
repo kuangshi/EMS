@@ -101,7 +101,6 @@ public class Func_ZhglActivity2 extends Activity {
 			// 在本例中arg2=arg3
 			HashMap<String, Object> item = (HashMap<String, Object>) arg0
 					.getItemAtPosition(arg2);
-
 			((SimpleAdapter) arg0.getAdapter()).notifyDataSetChanged();
 
 			Intent i;
@@ -109,46 +108,45 @@ public class Func_ZhglActivity2 extends Activity {
 			case 0:
 				i = new Intent();
 				i.setClass(Func_ZhglActivity2.this,
-						XSXX_ManageActivity.class);
+						TodoList_ManageActivity.class);
 				i.putExtra("uno", uno);
+				i.putExtra("dbfl", "06");
 				startActivity(i);
 				break;
-
 			case 1:
 				i = new Intent();
 				i.setClass(Func_ZhglActivity2.this,
-						XSCJ_ManageActivity.class);
+						TodoList_ManageActivity.class);
 				i.putExtra("uno", uno);
+				i.putExtra("dbfl", "07");
 				startActivity(i);
 				break;
 			case 2:
 				i = new Intent();
 				i.setClass(Func_ZhglActivity2.this,
-						BKXX_ManageActivity.class);
+						TodoList_ManageActivity.class);
+				i.putExtra("uno", uno);
+				i.putExtra("dbfl", "08");
 				startActivity(i);
 				break;
-//			case 3:
-//
-//				i = new Intent();
-//				i.setClass(Func_GrsyActivity.this,
-//						TodoList_ManageActivity.class);
-//				i.putExtra("uno", uno); // 设置Intent的Extra字段
-//				i.putExtra("dbfl", "02");
-//				i.putExtra("TableName", "ZHBG_QSBG_JBXX");
-//				startActivity(i);
-//
-//				break;
-//			case 4:
-//
-//				i = new Intent();
-//				i.setClass(Func_GrsyActivity.this,
-//						TodoList_ManageActivity.class);
-//				i.putExtra("uno", uno); // 设置Intent的Extra字段
-//				i.putExtra("dbfl", "02");
-//				i.putExtra("TableName", "ZHBG_TWFW_JBXX");
-//				startActivity(i);
-//
-//				break;
+			case 3:
+				i = new Intent();
+				i.setClass(Func_ZhglActivity2.this,
+						TodoList_ManageActivity.class);
+				i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "09");
+				//i.putExtra("TableName", "ZHBG_QSBG_JBXX");
+				startActivity(i);
+
+				break;
+			case 4:
+				i = new Intent();
+				i.setClass(Func_ZhglActivity2.this,
+						TodoList_ManageActivity.class);
+				i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "10");
+				startActivity(i);
+				break;
 //			case 5:
 //
 //				i = new Intent();

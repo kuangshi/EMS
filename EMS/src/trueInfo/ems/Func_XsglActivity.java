@@ -28,17 +28,13 @@ public class Func_XsglActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.func_selector);
-
 		// 初始化功能菜单
 		initFuncGrids();
 	}
 
 	private void initFuncGrids() {
-
 		GridView funcSeleView = (GridView) findViewById(R.id.func_selector);
 		// 生成动态数组，并且转入数据
 		ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
@@ -46,18 +42,14 @@ public class Func_XsglActivity extends Activity {
 		map.put("ItemImage", R.drawable.bg_xsgl01); // 添加图像资源的ID
 		map.put("ItemText", "学生信息");
 		lstImageItem.add(map);
-
 		map = new HashMap<String, Object>();
 		map.put("ItemImage", R.drawable.bg_xsgl02);
 		map.put("ItemText", "学生成绩");
 		lstImageItem.add(map);
-
 		map = new HashMap<String, Object>();
 		map.put("ItemImage", R.drawable.bg_xsgl03);
 		map.put("ItemText", "报考信息");
 		lstImageItem.add(map);
-		
-
 		// 重复内容
 
 		// 生成适配器的ImageItem <====> 动态数组的元素，两者一一对应
@@ -87,27 +79,31 @@ public class Func_XsglActivity extends Activity {
 				long arg3 // The row id of the item that was clicked
 		) {
 			// 在本例中arg2=arg3
-			HashMap<String, Object> item = (HashMap<String, Object>) arg0
-					.getItemAtPosition(arg2);
+			HashMap<String, Object> item = (HashMap<String, Object>) arg0.getItemAtPosition(arg2);
 
 			((SimpleAdapter) arg0.getAdapter()).notifyDataSetChanged();
-
 			Intent i;
 			switch (arg2) {
 			case 0:
 				i = new Intent();
-				i.setClass(Func_XsglActivity.this, XSXX_ManageActivity.class);
+				i.setClass(Func_XsglActivity.this, TodoList_ManageActivity.class);
+				i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "03");
 				startActivity(i);
 				break;
 
 			case 1:
 				i = new Intent();
-				i.setClass(Func_XsglActivity.this, XSCJ_ManageActivity.class);
+				i.setClass(Func_XsglActivity.this, TodoList_ManageActivity.class);
+				i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "04");
 				startActivity(i);
 				break;
 			case 2:
 				i = new Intent();
-				i.setClass(Func_XsglActivity.this, BaoKao_ManageActivity.class);
+				i.setClass(Func_XsglActivity.this, TodoList_ManageActivity.class);
+				i.putExtra("uno", uno); // 设置Intent的Extra字段
+				i.putExtra("dbfl", "05");
 				startActivity(i);
 				break;
 			default:
