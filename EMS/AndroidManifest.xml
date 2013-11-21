@@ -72,6 +72,7 @@
             android:name="trueInfo.ems.Func_ShezActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        
         <activity android:name="trueInfo.ems.NoticeInfoActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
@@ -90,7 +91,9 @@
         <activity android:name="XSXX_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity android:name="XSCJ_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity android:name="BaoKao_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+    	<activity  android:name="trueInfo.ems.TodoList_ManageActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
+    
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
     </uses-permission>
